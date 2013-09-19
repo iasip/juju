@@ -1,0 +1,5 @@
+#!/bin/bash
+
+juju-log "Starting The Hub Using Port 4444"
+java -jar selenium-server-standalone-2.35.0.jar -role hub
+curl "http://localhost:4444/wd/hub/status"

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e # If any command fails, stop execution of the hook with that error
+
+juju-log "Installing Pip and Java."
+apt-get install -y curl wget python-setuptools openjdk-7-jre
+easy_install pip
+pip install --upgrade pip
+
+SELENIUM="http://selenium.googlecode.com/files/selenium-server-standalone-2.35.0.jar"
+
+juju-log "Fetching $SELENIUM."
+wget "$SELENIUM"
+
+juju-log "Installing Selenium Python Client Driver."
+pip install -U selenium
+
+juju-log "Fin."
