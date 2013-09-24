@@ -1,5 +1,8 @@
 #!/bin/bash
+
 set -e #If any command fails, stop execution of that hook with that error
+
+apt-get install -y wget
 
 PHANTOMJS="http://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2"
 
