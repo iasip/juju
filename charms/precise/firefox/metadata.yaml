@@ -1,0 +1,7 @@
+name: firefox
+summary: Mozilla Firefox is a free open source web browser.
+maintainer: One Shore
+description: |
+  This charm sets up a Firefox browser.
+categories:
+  - applications

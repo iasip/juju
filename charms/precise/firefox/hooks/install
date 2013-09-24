@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e # If any command fails, stop execution of the hook with that error
+
+FIREFOX="http://download-origin.cdn.mozilla.net/pub/mozilla.org/firefox/releases/24.0/linux-x86_64/en-US/firefox-24.0.tar.bz2"
+
+juju-log "Installing Virtual Framebuffer."
+apt-get install -y wget xvfb
+
+juju-log "Setting Up $FIREFOX."
+wget $FIREFOX
+tar xjf firefox-24.0.tar.bz2
+mv firefox /usr/local/share
+ln -s /usr/local/share/firefox/firefox /usr/local/bin/firefox
+ln -s /usr/local/share/firefox/firefox /usr/bin/firefox
+
+juju-log "Fin."
