@@ -1,0 +1,6 @@
+#!/bin/bash
+
+juju-log "Starting Virtual Framebuffer."
+Xvfb :0 -screen 0 1024x768x8 -extension RANDR
+export DISPLAY=:0
+

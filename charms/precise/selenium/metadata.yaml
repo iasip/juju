@@ -1,0 +1,7 @@
+name: selenium
+summary: Selenium is a software testing framework for automating browsers.
+maintainer: One Shore
+description: |
+  This charm deploys a Selenium server.
+categories:
+  - applications
