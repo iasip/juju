@@ -1,0 +1,13 @@
+options:
+  selenium-site:
+    type: string
+    default: "http://selenium.googlecode.com/files/selenium-server-standalone-2.35.0.jar"
+    description:
+  phantomjs-site:
+    type: string
+    default: "http://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2"
+    description:
+  firefox-site:
+    type: string
+    default: "http://download-origin.cdn.mozilla.net/pub/mozilla.org/firefox/releases/24.0/linux-x86_64/en-US/firefox-24.0.tar.bz2"
+    description:
