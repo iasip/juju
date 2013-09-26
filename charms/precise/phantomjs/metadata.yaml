@@ -1,6 +1,6 @@
 name: phantomjs
 summary: minimalistic headless WebKit-based with JavaScript API
-maintainer: Andrew <Andrew@andrew-VirtualBox>
+maintainer: Andrew Thomas <acthomas@one-shore.com>
 description: |
   PhantomJS is a headless WebKit with JavaScript API. It has fast and
   native support for various web standards: DOM handling, CSS selector,
