@@ -4,5 +4,6 @@ maintainer: Aaron Evans <aarone@one-shore.com>
 description: |
   Selenium is software for automating browsers.  It is primarily used for testing web applications.
 categories:
-  - misc
-
+  - applications
+provides:
+interface: http
