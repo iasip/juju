@@ -3,16 +3,32 @@
 set -e # If any command fails, stop execution of the hook with that error
 
 juju-log "Installing Pip and Java."
-apt-get install -y curl wget python-setuptools openjdk-7-jre
+apt-get install -y curl wget python-setuptools openjdk-7-jre xvfb
 easy_install pip
 pip install --upgrade pip
 
 SELENIUM="http://selenium.googlecode.com/files/selenium-server-standalone-2.35.0.jar"
-
+PHANTOMJS="http://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2"
+FIREFOX="http://download-origin.cdn.mozilla.net/pub/mozilla.org/firefox/releases/24.0/linux-x86_64/en-US/firefox-24.0.tar.bz2"
 juju-log "Fetching $SELENIUM."
 wget "$SELENIUM"
 
 juju-log "Installing Selenium Python Client Driver."
-pip install -U selenium
+pip install -U selenium pyvirtualdisplay
+
+juju-log "Setting Up PhantomJS."
+wget "$PHANTOMJS"
+tar xjf phantomjs-1.9.2-linux-x86_64.tar.bz2
+mv phantomjs-1.9.2-linux-x86_64 /usr/local/share
+ln -s /usr/local/share/phantomjs-1.9.2-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs
+ln -s /usr/local/share/phantomjs-1.9.2-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
+ln -s /usr/local/share/phantomjs-1.9.2-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
+
+juju-log "Setting Up Firefox."
+wget "$FIREFOX"
+tar xjf firefox-24.0.tar.bz2
+mv firefox /usr/local/share
+ln -s /usr/local/share/firefox/firefox /usr/local/bin/firefox
+ln -s /usr/local/share/firefox/firefox /usr/bin/firefox
 
 juju-log "Fin."
