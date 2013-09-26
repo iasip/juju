@@ -1,7 +1,8 @@
 name: selenium
-summary: Selenium is a software testing framework for automating browsers.
-maintainer: One Shore
+summary: This charm deploys a remote Selenium server.
+maintainer: Aaron Evans <aarone@one-shore.com>
 description: |
-  This charm deploys a Selenium server.
+  Selenium is software for automating browsers.  It is primarily used for testing web applications.
 categories:
-  - applications
+  - misc
+

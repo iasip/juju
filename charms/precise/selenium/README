@@ -1,0 +1,1 @@
+Note: As of now, before using Firefox, you have to enter the following into your terminal: "export DISPLAY=:0" (for Xvfb).
