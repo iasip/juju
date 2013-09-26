@@ -2,14 +2,16 @@
 
 Selenium is a software testing framework for automating web browsers.
 	[http://docs.seleniumhq.org/] 
+
 Mozilla FireFox is a web browser that can be used for testing purposes with this charm.
 	[http://www.mozilla.org/en-US/]	
+
 PhantomJS is a headless webkit used mainly for optimizing tests of web applications.
 	[http://phantomjs.org/]
 
 # Installation
 
-To deploy this charm you will need at a minimum: a cloud environment, a working Juju installation with a successful bootstrap.  One bootstrapped, execute the following deploy command: 
+To deploy this charm you will need at a minimum: a cloud environment, a working Juju installation with a successful bootstrap.  Once bootstrapped, execute the following deploy commands: 
 
 	juju deploy selenium
 	juju deploy jenkins-selenium-example-job
@@ -48,4 +50,12 @@ After these steps, a successful deployment will look similar to this (juju statu
 	        agent-version: 1.14.1
 	        machine: "1"
 	        public-address: ec2-50-19-35-186.compute-1.amazonaws.com
-## WAIT ##	
+# General 	
+
+As of now, before using Firefox, you must add the following environment variable for xvfb (X Virtual Framebuffer):
+	
+	 "export DISPLAY=:0"
+ 
+# Configuration
+
+Download URLs are specified in 'config.yaml'. Here you can update the versions of Selenium, PhantomJS, and FireFox. 
