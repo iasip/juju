@@ -1,17 +1,14 @@
 name: jenkins-selenium-example
-summary: <Fill in summary here>
+summary: Jenkins is a continuous integration server used for testing.  Selenium is a software testing framework that automates web browsers. 
 maintainer: Andrew <Andrew@Andrew>
 description: |
-  <Multi-line description here>
+This charm deploys a Jenkins job for a Selenium server.
 categories:
   - misc
-subordinate: false
-provides:
-  provides-relation:
-    interface: interface-name
+subordinate: true 
 requires:
-  requires-relation:
-    interface: interface-name
+  website:
+    interface: http
 peers:
-  peer-relation:
-    interface: interface-name
+  selenium:
+    interface: http

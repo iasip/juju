@@ -5,3 +5,6 @@ description: |
   This charm sets up a Firefox browser.
 categories:
   - applications
+peers:
+  selenium:
+    interface: http

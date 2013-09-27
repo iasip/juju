@@ -10,12 +10,6 @@ description: |
 categories:
   - misc
 subordinate: false
-provides:
-  provides-relation:
-    interface: interface-name
-requires:
-  requires-relation:
-    interface: interface-name
 peers:
-  peer-relation:
-    interface: interface-name
+  selenium:
+    interface: http

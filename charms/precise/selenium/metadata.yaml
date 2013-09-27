@@ -3,10 +3,13 @@ maintainer: Aaron Evans <aarone@one-shore.com>
 summary: Selenium Server
 description: |
   Selenium is software for automating browsers.  It is primarily used for testing web applications.
-
-  This charm deploys a remote Selenium server.
 categories:
   - misc
-provides:
+requires:
   website:
+    interface: http
+peers:
+  phantomjs:
+    interface: http
+  jenkins-selenium-example:
     interface: http
