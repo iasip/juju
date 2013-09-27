@@ -1,0 +1,4 @@
+#!/bin/sh
+HOSTNAME="relation-get private-address"
+juju-log "Setting url relation to http://$HOSTNAME"
+relation-set url="http://$HOSTNAME"
