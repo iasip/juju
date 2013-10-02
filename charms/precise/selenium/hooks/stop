@@ -1,4 +1,4 @@
 #!/bin/bash
 
 juju-log "Shutting Server Down"
-curl "http://localhost:4444/selenium-server/driver?cmd=shutDownSeleniumServer"
+curl "http://127.0.0.1:4444/selenium-server/driver?cmd=shutDownSeleniumServer"

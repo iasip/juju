@@ -1,9 +1,8 @@
 #!/bin/bash
 
 juju-log "Starting Virtual Framebuffer."
-Xvfb :0 -screen 0 1024x768x8 -extension RANDR
-export DISPLAY=:0
+Xvfb :0 -screen 0 1024x768x8 -extension RANDR &
 
 juju-log "Starting The Hub Using Port 4444."
-java -jar selenium-server-standalone-2.35.0.jar -role hub
-curl "http://localhost:4444/wd/hub/status"
+/usr/bin/java -jar /usr/local/share/selenium-server-standalone-2.35.0.jar &
+#curl "http://127.0.0.1:4444/wd/hub/status"
